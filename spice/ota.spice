@@ -1,0 +1,26 @@
+.include ../minimal_libs/pshort.lib
+.include ../minimal_libs/nshort.lib
+
+.subckt	ota	in1	in2	vd	vs	ib	out
+
+*label drain   gate    source  bulk    model           width   		length
+M1      c	in1	b       b	pshort_model.0  W=2.93u		L=1u
+M2      d	in2	b	b	pshort_model.0  W=2.93u		L=1u
+M3      c       c	vs	vs	nshort_model.0  W=0.861u	L=1u
+M4	d	c	vs	vs	nshort_model.0  W=0.861u	L=1u
+M5	ib	ib	vd	vd	pshort_model.0  W=5.85u		L=1u
+M6      b	ib	vd	vd	pshort_model.0  W=5.85u		L=1u
+M7	e	d	vs	vs	nshort_model.0  W=8.61u		L=1u
+M8	e	ib	vd	vd	pshort_model.0  W=29.3u		L=1u
+M9	vs	e	out	out	pshort_model.0  W=5.85u		L=1u
+M10	out	ib	vd	vd	pshort_model.0  W=5.85u		L=1u
+
+Cc	d	e	0.5p
+
+C0	ib 	b 	2.94fF
+C1	ib 	vd 	2.95fF
+C2 	d	 b 	430.72fF
+C3 	ib 	vs 	3.88fF
+C4 	vd 	vs 	2.31fF
+
+.ends

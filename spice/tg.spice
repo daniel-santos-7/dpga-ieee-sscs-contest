@@ -1,0 +1,14 @@
+** transmission gate **
+
+.include	../minimal_libs/pshort.lib
+.include	../minimal_libs/nshort.lib
+
+.subckt	tg	ctrl	a	b	vdd	vss
+
+*lbl	drain	gate	source	bulk	model		with	length
+M1	b	nctrl	a	vss	nshort_model.0	W=1u	L=0.15u
+M2	a	ctrl	b	vdd	pshort_model.0	W=3u	L=0.15u
+M3	nctrl	ctrl	vdd	vdd	pshort_model.0	W=3u	L=0.15u
+M4	nctrl	ctrl	vss	vss	nshort_model.0	W=1u	L=0.15u
+
+.ends

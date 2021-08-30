@@ -1,0 +1,59 @@
+
+
+
+.include	../minimal_libs/pshort.lib
+.include	../minimal_libs/nshort.lib
+.include	./tg.spice
+
+.param	Rn=1k
+
+Xtg7	c7	n8	n7	vdd	vss	tg
+Xtg6	c6	n7	n6	vdd	vss	tg
+Xtg5	c5	n6	n5	vdd	vss	tg
+Xtg4	c4	n5	n4	vdd	vss	tg
+Xtg3	c3	n4	n3	vdd	vss	tg
+Xtg2	c2	n3	n2	vdd	vss	tg
+Xtg1	c1	n2	n1	vdd	vss	tg
+Xtg0	c0	n1	0	vdd	vss	tg
+
+Vdd	vdd	0	1.8
+Vss	vss	0	0
+
+V8	n8	0	1.8
+
+Vc7	c7	0	pulse(1.8 0 0 0 0 640m 1280m)
+Vc6	c6	0	pulse(1.8 0 0 0 0 320m 640m)
+Vc5	c5	0	pulse(1.8 0 0 0 0 160m 320m)
+Vc4	c4	0	pulse(1.8 0 0 0 0 80m 160m)
+Vc3	c3	0	pulse(1.8 0 0 0 0 40m 80m)
+Vc2	c2	0	pulse(1.8 0 0 0 0 20m 40m)
+Vc1	c1	0	pulse(1.8 0 0 0 0 10m 20m)
+Vc0	c0	0	pulse(1.8 0 0 0 0 5m 10m)
+
+R7	n8	n7	{128*Rn}
+R6	n7	n6	{64*Rn}
+R5	n6	n5	{32*Rn}
+R4	n5	n4	{16*Rn}
+R3	n4	n3	{8*Rn}
+R2	n3	n2	{4*Rn}
+R1	n2	n1	{2*Rn}
+R0	n1	0	{Rn}
+
+.end
+
+.control
+
+set color0=white
+set color1=black
+
+run
+
+tran 1m 1280m 5m
+
+let R=abs(n8/i(V8))
+
+plot R
+
+plot c0 c1+2 c2+4 c3+6 c4+8 c5+10 c6+12 c7+14
+
+.endc

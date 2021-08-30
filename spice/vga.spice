@@ -1,0 +1,53 @@
+
+.include ./ota.spice
+.include ./digpot.spice
+
+.param b7=0 b6=0 b5=0 b4=0 b3=0 b2=0 b1=0 b0=0
+.param Rn=1k
+
+Xamp	in1	in2	vd	vs	ib	out	ota	
+
+Vdd 	vd 	0 	1.8
+Vss 	vs 	0 	-1.8
+
+Cl	out	0	4p
+Ibias 	ib 	0 	5.53u
+
+*Rf	out	in1	4250
+
+Xdp	out	in1	vd	0	c7 c6 c5 c4 c3 c2 c1 c0 digpot Rn={Rn}
+
+Vc7	c7	0	{1.8*b7}
+Vc6	c6	0	{1.8*b6}
+Vc5	c5	0	{1.8*b5}
+Vc4	c4	0	{1.8*b4}
+Vc3	c3	0	{1.8*b3}
+Vc2	c2	0	{1.8*b2}
+Vc1	c1	0	{1.8*b1}
+Vc0	c0	0	{1.8*b0}
+
+Ri	in	in1	{Rn}
+
+Vin	in	0	dc 0	ac 1
+Vgnd	in2	0	dc 0
+
+.ac	dec	2000	1	5Meg
+
+*.tran	0.01m	10m
+
+.end
+
+.control
+
+set color0=white
+set color1=black
+
+destroy all
+
+run
+
+let gain=abs(out/in)
+
+plot gain
+
+.endc
