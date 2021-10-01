@@ -1,0 +1,36 @@
+*TB CMRR OTA BUFFERED
+
+.include ./ota.spice
+
+X1	IN1	IN2	VD	VS	A	OUT ota
+
+CL	OUT	0	4p
+*CL	E	0	4p
+*CC	D	E	0.5p
+*CC	D	E	0.88p
+
+Ibias A 0 5.53u
+
+VDD VD 0 1.8
+VSS VS 0 -1.8
+
+*VIN1 IN1 0 sin(0 1 100k)
+VIN1 IN1 0 pulse(0 1 2u 2n 2n 10u 100n)
+VIN2 IN2 0 DC 0
+
+* cmd 	step	stop
+
+.tran	10n	2.5u 
+
+.end
+
+* Control
+.control
+
+destroy all
+run
+
+plot out in1
+
+
+.endc

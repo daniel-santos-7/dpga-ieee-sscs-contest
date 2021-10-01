@@ -1,8 +1,5 @@
-
-
-
-.include	../minimal_libs/pshort.lib
-.include	../minimal_libs/nshort.lib
+*.include	../minimal_libs/pshort.lib
+*.include	../minimal_libs/nshort.lib
 .include	./tg.spice
 
 .param	Rn=1k
