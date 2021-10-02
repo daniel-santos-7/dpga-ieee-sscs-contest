@@ -29,7 +29,7 @@ architecture spi_slave_arch of spi_slave is
 
 begin
 
-    rx: process(sclk, reset)
+    rx: process(sclk, reset, ss)
     begin
 
         if reset = '1' then
