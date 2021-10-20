@@ -1,0 +1,30 @@
+v {xschem version=2.9.9 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -40 130 -40 {}
+L 4 -130 40 130 40 {}
+L 4 -130 -40 -130 40 {}
+L 4 130 -40 130 40 {}
+L 4 -150 -30 -130 -30 {}
+L 4 50 40 50 60 {}
+L 4 -160 -0 -130 0 {}
+L 4 130 -0 160 -0 {}
+L 4 50 -70 50 -40 {}
+B 5 -152.5 -32.5 -147.5 -27.5 {name=ctrl dir=in }
+B 5 47.5 -72.5 52.5 -67.5 {name=vd dir=inout }
+B 5 157.5 -2.5 162.5 2.5 {name=b dir=inout }
+B 5 47.5 57.5 52.5 62.5 {name=vgnd dir=inout }
+B 5 -162.5 -2.5 -157.5 2.5 {name=a dir=inout }
+T {Transmission Gate} -77 -11 0 0 0.3 0.3 {}
+T {XTG} 105 -62 0 0 0.2 0.2 {}
+T {ctrl} -125 -34 0 0 0.2 0.2 {}
+T {vd} 35 -34 0 1 0.2 0.2 {}
+T {b} 125 6 0 1 0.2 0.2 {}
+T {vgnd} 45 26 0 1 0.2 0.2 {}
+T {a} -115 6 0 1 0.2 0.2 {}
