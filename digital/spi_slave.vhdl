@@ -32,7 +32,7 @@ begin
     rx: process(sclk, reset, ss)
     begin
 
-        if reset = '1' then
+        if reset = '0' then
             
             shift_reg <= (others => '0');
 

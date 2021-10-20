@@ -48,7 +48,7 @@ begin
 
     sim_started <= false, true after period;
 
-    reset <= '1' when not sim_started else '0';
+    reset <= '0' when not sim_started else '1';
 
     sclk <= not sclk after period/2 when sim_started and not sim_finished else '0';
 
