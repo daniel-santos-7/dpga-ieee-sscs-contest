@@ -1,0 +1,60 @@
+.subckt digpot c0 c1 c2 c3 c4 c5 c6 c7 gnd vd n0 n8
+*.ipin c0
+*.ipin c1
+*.ipin c2
+*.ipin c3
+*.ipin c4
+*.ipin c5
+*.ipin c6
+*.ipin c7
+*.iopin gnd
+*.iopin vd
+*.iopin n0
+*.iopin n8
+xtg1 c0 vd n1 gnd n0 tg
+xtg2 c1 vd n2 gnd n1 tg
+xtg3 c2 vd n3 gnd n2 tg
+xtg4 c3 vd n4 gnd n3 tg
+xtg5 c4 vd n5 gnd n4 tg
+xtg6 c5 vd n6 gnd n5 tg
+xtg7 c6 vd n7 gnd n6 tg
+xtg8 c7 vd n8 gnd n7 tg
+XR0_2 n1 n0 gnd sky130_fd_pr__res_xhigh_po W=0.35 L=0.35 mult=1 m=1
+XR0_1 n1 n0 gnd sky130_fd_pr__res_xhigh_po W=0.35 L=0.35 mult=1 m=1
+XR1 n2 n1 gnd sky130_fd_pr__res_xhigh_po W=0.35 L=0.35 mult=1 m=1
+XR2 n3 n2 gnd sky130_fd_pr__res_xhigh_po W=0.35 L=0.7 mult=1 m=1
+XR3 n4 n3 gnd sky130_fd_pr__res_xhigh_po W=0.35 L=1.4 mult=1 m=1
+XR4 n5 n4 gnd sky130_fd_pr__res_xhigh_po W=0.35 L=2.8 mult=1 m=1
+XR5 n6 n5 gnd sky130_fd_pr__res_xhigh_po W=0.35 L=5.6 mult=1 m=1
+XR6 n7 n6 gnd sky130_fd_pr__res_xhigh_po W=0.35 L=11.2 mult=1 m=1
+XR7 n8 n7 gnd sky130_fd_pr__res_xhigh_po W=0.35 L=22.4 mult=1 m=1
+.ends
+
+* expanding   symbol:  /home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/xschem/tg.sym # of
+*+ pins=5
+* sym_path: /home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/xschem/tg.sym
+* sch_path: /home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/xschem/tg.sch
+.subckt tg  ctrl vd b vgnd a
+*.iopin vd
+*.iopin vgnd
+*.iopin b
+*.iopin a
+*.ipin ctrl
+XM2 a ctrl b b sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM1 b nctrl net1 net1 sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM3 nctrl ctrl vgnd vgnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM4 nctrl ctrl vd vd sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+** flattened .save nodes
+.end
+
+

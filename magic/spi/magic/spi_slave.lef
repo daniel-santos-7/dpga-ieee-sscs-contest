@@ -1,0 +1,166 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO spi_slave
+  CLASS BLOCK ;
+  FOREIGN spi_slave ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 92.935 BY 103.655 ;
+  PIN VGND
+    DIRECTION INPUT ;
+    USE GROUND ;
+    PORT
+      LAYER met5 ;
+        RECT 5.520 37.040 87.400 38.640 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INPUT ;
+    USE POWER ;
+    PORT
+      LAYER met5 ;
+        RECT 5.520 23.440 87.400 25.040 ;
+    END
+  END VPWR
+  PIN data[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 5.610 0.000 5.890 4.000 ;
+    END
+  END data[0]
+  PIN data[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 17.110 0.000 17.390 4.000 ;
+    END
+  END data[1]
+  PIN data[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 28.610 0.000 28.890 4.000 ;
+    END
+  END data[2]
+  PIN data[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 40.110 0.000 40.390 4.000 ;
+    END
+  END data[3]
+  PIN data[4]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 52.070 0.000 52.350 4.000 ;
+    END
+  END data[4]
+  PIN data[5]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 63.570 0.000 63.850 4.000 ;
+    END
+  END data[5]
+  PIN data[6]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 75.070 0.000 75.350 4.000 ;
+    END
+  END data[6]
+  PIN data[7]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 86.570 0.000 86.850 4.000 ;
+    END
+  END data[7]
+  PIN reset
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 81.050 99.655 81.330 103.655 ;
+    END
+  END reset
+  PIN sclk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 34.590 99.655 34.870 103.655 ;
+    END
+  END sclk
+  PIN sdi
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 58.050 99.655 58.330 103.655 ;
+    END
+  END sdi
+  PIN ss
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 11.590 99.655 11.870 103.655 ;
+    END
+  END ss
+  OBS
+      LAYER nwell ;
+        RECT 5.330 88.345 87.590 91.175 ;
+        RECT 5.330 82.905 87.590 85.735 ;
+        RECT 5.330 77.465 87.590 80.295 ;
+        RECT 5.330 72.025 87.590 74.855 ;
+        RECT 5.330 66.585 87.590 69.415 ;
+        RECT 5.330 61.145 87.590 63.975 ;
+        RECT 5.330 55.705 87.590 58.535 ;
+        RECT 5.330 50.265 87.590 53.095 ;
+        RECT 5.330 44.825 87.590 47.655 ;
+        RECT 5.330 39.385 87.590 42.215 ;
+        RECT 5.330 33.945 87.590 36.775 ;
+        RECT 5.330 28.505 87.590 31.335 ;
+        RECT 5.330 23.065 87.590 25.895 ;
+        RECT 5.330 17.625 87.590 20.455 ;
+        RECT 5.330 12.185 87.590 15.015 ;
+      LAYER li1 ;
+        RECT 5.520 10.795 87.400 92.565 ;
+      LAYER met1 ;
+        RECT 5.520 10.240 87.400 92.720 ;
+      LAYER met2 ;
+        RECT 5.620 99.375 11.310 99.655 ;
+        RECT 12.150 99.375 34.310 99.655 ;
+        RECT 35.150 99.375 57.770 99.655 ;
+        RECT 58.610 99.375 80.770 99.655 ;
+        RECT 81.610 99.375 86.840 99.655 ;
+        RECT 5.620 4.280 86.840 99.375 ;
+        RECT 6.170 4.000 16.830 4.280 ;
+        RECT 17.670 4.000 28.330 4.280 ;
+        RECT 29.170 4.000 39.830 4.280 ;
+        RECT 40.670 4.000 51.790 4.280 ;
+        RECT 52.630 4.000 63.290 4.280 ;
+        RECT 64.130 4.000 74.790 4.280 ;
+        RECT 75.630 4.000 86.290 4.280 ;
+      LAYER met3 ;
+        RECT 18.365 10.715 74.550 92.645 ;
+      LAYER met4 ;
+        RECT 18.365 10.640 74.550 92.720 ;
+      LAYER met5 ;
+        RECT 5.520 50.640 87.400 79.440 ;
+  END
+END spi_slave
+END LIBRARY
+

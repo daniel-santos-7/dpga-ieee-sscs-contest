@@ -1,0 +1,28 @@
+* NGSPICE file created from /home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/magic/digpot/tg/mag/tg.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_V3CPBF w_n211_n310# a_15_n100# a_n33_n188# a_n73_n100#
+X0 a_15_n100# a_n33_n188# a_n73_n100# w_n211_n310# sky130_fd_pr__nfet_01v8 w=1e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_4J4M39 VSUBS m1_n29_341# m1_n153_443# m1_21_n283#
++ m1_n29_n387# m1_n67_29#
+X0 a_15_n300# a_n33_n397# a_n73_n300# w_n211_n519# sky130_fd_pr__pfet_01v8 w=3e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_ZBX7X9 m1_n29_132# m1_21_n83# m1_n153_n280# m1_n67_n11#
++ m1_n29_n178# w_n211_n310#
+X0 a_15_n100# a_n33_n188# a_n73_n100# w_n211_n310# sky130_fd_pr__nfet_01v8 w=1e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_RJZS2S VSUBS w_n211_n519# a_15_n300# a_n73_n300# a_n33_n397#
+X0 a_15_n300# a_n33_n397# a_n73_n300# w_n211_n519# sky130_fd_pr__pfet_01v8 w=3e+06u l=150000u
+.ends
+
+.subckt x/home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/magic/digpot/tg/mag/tg
++ vd vgnd b a ctrl
+XXM1 vgnd m1_830_n1250# ctrl vgnd sky130_fd_pr__nfet_01v8_V3CPBF
+XXM2 vgnd m1_780_190# vd m1_830_n1250# ctrl vd sky130_fd_pr__pfet_01v8_4J4M39
+XXM3 m1_830_n1250# a a b m1_1660_150# vgnd sky130_fd_pr__nfet_01v8_ZBX7X9
+XXM4 vgnd ctrl b a ctrl sky130_fd_pr__pfet_01v8_RJZS2S
+.ends
+

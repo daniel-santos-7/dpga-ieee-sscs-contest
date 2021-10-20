@@ -1,0 +1,98 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1633229372
+<< nwell >>
+rect 1066 17669 17518 18235
+rect 1066 16581 17518 17147
+rect 1066 15493 17518 16059
+rect 1066 14405 17518 14971
+rect 1066 13317 17518 13883
+rect 1066 12229 17518 12795
+rect 1066 11141 17518 11707
+rect 1066 10053 17518 10619
+rect 1066 8965 17518 9531
+rect 1066 7877 17518 8443
+rect 1066 6789 17518 7355
+rect 1066 5701 17518 6267
+rect 1066 4613 17518 5179
+rect 1066 3525 17518 4091
+rect 1066 2437 17518 3003
+<< obsli1 >>
+rect 1104 2159 17480 18513
+<< obsm1 >>
+rect 1104 2048 17480 18544
+<< metal2 >>
+rect 2318 19931 2374 20731
+rect 6918 19931 6974 20731
+rect 11610 19931 11666 20731
+rect 16210 19931 16266 20731
+rect 1122 0 1178 800
+rect 3422 0 3478 800
+rect 5722 0 5778 800
+rect 8022 0 8078 800
+rect 10414 0 10470 800
+rect 12714 0 12770 800
+rect 15014 0 15070 800
+rect 17314 0 17370 800
+<< obsm2 >>
+rect 1124 19875 2262 19931
+rect 2430 19875 6862 19931
+rect 7030 19875 11554 19931
+rect 11722 19875 16154 19931
+rect 16322 19875 17368 19931
+rect 1124 856 17368 19875
+rect 1234 800 3366 856
+rect 3534 800 5666 856
+rect 5834 800 7966 856
+rect 8134 800 10358 856
+rect 10526 800 12658 856
+rect 12826 800 14958 856
+rect 15126 800 17258 856
+<< obsm3 >>
+rect 3673 2143 14910 18529
+<< obsm4 >>
+rect 3673 2128 14910 18544
+<< metal5 >>
+rect 1104 7408 17480 7728
+rect 1104 4688 17480 5008
+<< obsm5 >>
+rect 1104 10128 17480 15888
+<< labels >>
+rlabel metal5 s 1104 7408 17480 7728 6 VGND
+port 1 nsew ground input
+rlabel metal5 s 1104 4688 17480 5008 6 VPWR
+port 2 nsew power input
+rlabel metal2 s 1122 0 1178 800 6 data[0]
+port 3 nsew signal output
+rlabel metal2 s 3422 0 3478 800 6 data[1]
+port 4 nsew signal output
+rlabel metal2 s 5722 0 5778 800 6 data[2]
+port 5 nsew signal output
+rlabel metal2 s 8022 0 8078 800 6 data[3]
+port 6 nsew signal output
+rlabel metal2 s 10414 0 10470 800 6 data[4]
+port 7 nsew signal output
+rlabel metal2 s 12714 0 12770 800 6 data[5]
+port 8 nsew signal output
+rlabel metal2 s 15014 0 15070 800 6 data[6]
+port 9 nsew signal output
+rlabel metal2 s 17314 0 17370 800 6 data[7]
+port 10 nsew signal output
+rlabel metal2 s 16210 19931 16266 20731 6 reset
+port 11 nsew signal input
+rlabel metal2 s 6918 19931 6974 20731 6 sclk
+port 12 nsew signal input
+rlabel metal2 s 11610 19931 11666 20731 6 sdi
+port 13 nsew signal input
+rlabel metal2 s 2318 19931 2374 20731 6 ss
+port 14 nsew signal input
+<< properties >>
+string LEFclass BLOCK
+string FIXED_BBOX 0 0 18587 20731
+string LEFview TRUE
+string GDS_FILE /openLANE_flow/designs/spi_slave/runs/03-10_02-42/results/magic/spi_slave.gds
+string GDS_END 291976
+string GDS_START 78848
+<< end >>
+

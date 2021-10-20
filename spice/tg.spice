@@ -1,14 +1,16 @@
 ** transmission gate **
 
-.include	../minimal_libs/pshort.lib
-.include	../minimal_libs/nshort.lib
+.include ../minimal_libs/sky130_libs/sky130_lib.spice
 
 .subckt	tg	ctrl	a	b	vdd	vss
 
-*lbl	drain	gate	source	bulk	model		with	length
-M1	b	nctrl	a	vss	nshort_model.0	W=1u	L=0.15u
-M2	a	ctrl	b	vdd	pshort_model.0	W=3u	L=0.15u
-M3	nctrl	ctrl	vdd	vdd	pshort_model.0	W=3u	L=0.15u
-M4	nctrl	ctrl	vss	vss	nshort_model.0	W=1u	L=0.15u
+*lbl	drain	gate	source	bulk	model			length	width
+*tg
+xm1	b	nctrl	a	vss	sky130_fd_pr__nfet_01v8	L=0.15u	W=1u
+xm2	a	ctrl	b	vdd	sky130_fd_pr__pfet_01v8	L=0.15u	W=3u
+*inverter
+xm3	nctrl	ctrl	vss	vss	sky130_fd_pr__nfet_01v8	L=0.15u	W=1u
+xm4	nctrl	ctrl	vdd	vdd	sky130_fd_pr__pfet_01v8	L=0.15u	W=3u
+
 
 .ends

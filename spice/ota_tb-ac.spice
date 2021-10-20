@@ -1,0 +1,43 @@
+*TB AC OTA BUFFERED
+
+.include ./ota.spice
+
+X1	IN1	IN2	VD	VS	A	OUT	 ota
+
+
+CL	OUT	0	4p
+*CC	D	E	0.5p
+*CC	D	E	0.88p
+
+Ibias A 0 5.53u
+
+VDD VD 0 1.8
+VSS VS 0 -1.8
+
+VIN1 IN1 0 DC 0 AC 1
+VIN2 IN2 0 DC 0
+
+*Malha Fechada
+*VIN1 X 0 DC 0 AC 1
+*Ri X IN1 10k
+*RF IN1 OUT 30k
+
+* cmd 	step	stop
+.ac	dec	2000	1	110Meg
+
+.end
+
+.control
+
+destroy all
+run
+
+*Magnitude
+
+plot db(abs(OUT/IN1)) 40.4615
+
+*Fase em graus
+
+plot (ph(OUT)-ph(IN1))*180/3.14159 1.0472*180/3.14159
+
+.endc
