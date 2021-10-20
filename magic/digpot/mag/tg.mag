@@ -1,0 +1,44 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1633727910
+<< checkpaint >>
+rect -1313 2686 1629 2845
+rect -1313 -713 2736 2686
+rect -944 -766 2736 -713
+rect -575 -819 2736 -766
+rect -206 -872 2736 -819
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+rect 0 -1600 200 -1400
+use sky130_fd_pr__pfet_01v8_XGSNAL  XM4
+timestamp 1633727910
+transform 1 0 1265 0 1 907
+box -211 -519 211 519
+use sky130_fd_pr__nfet_01v8_4HKF44  XM3
+timestamp 1633727910
+transform 1 0 896 0 1 751
+box -211 -310 211 310
+use sky130_fd_pr__nfet_01v8_4HKF44  XM1
+timestamp 1633727910
+transform 1 0 527 0 1 804
+box -211 -310 211 310
+use sky130_fd_pr__pfet_01v8_XGSNAL  XM2
+timestamp 1633727910
+transform 1 0 158 0 1 1066
+box -211 -519 211 519
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 256 0 0 0 ctrl
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 256 0 0 0 vd
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 256 0 0 0 b
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 256 0 0 0 vgnd
+port 3 nsew
+flabel metal1 0 -1600 200 -1400 0 FreeSans 256 0 0 0 a
+port 4 nsew
+<< end >>
