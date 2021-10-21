@@ -4,6 +4,7 @@ K {}
 V {}
 S {}
 E {}
+T {1k} 115 -715 0 0 0.2 0.2 {}
 N 230 -685 400 -685 { lab=in1}
 N 230 -910 230 -685 { lab=in1}
 N 660 -910 660 -670 { lab=out}
@@ -21,16 +22,16 @@ N 390 -995 390 -980 { lab=c3}
 N 420 -995 420 -980 { lab=c4}
 N 450 -995 450 -980 { lab=c5}
 N 480 -995 480 -980 { lab=c6}
-N 510 -995 510 -980 { lab=c0}
-C {/home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/xschem/digpot.sym} 220 -730 0 0 {name=x1}
+N 510 -995 510 -980 { lab=c7}
+C {/home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/xschem/digpot.sym} 220 -730 0 0 {name=XDP1}
 C {devices/code_shown.sym} 90 -1190 0 0 {name=Lib only_toplevel=false value=".end
 .lib /edatools/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 *.include /home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/minimal_libs/sky130_libs/sky130_lib.spice"}
-C {/home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/xschem/ota.sym} 420 -670 0 0 {name=X1}
+C {/home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/xschem/ota.sym} 420 -670 0 0 {name=XOTA1}
 C {devices/lab_pin.sym} 230 -895 0 0 {name=l21 sig_type=std_logic lab=in1}
 C {devices/lab_pin.sym} 475 -715 1 0 {name=l23 sig_type=std_logic lab=vd}
 C {devices/lab_pin.sym} 580 -980 1 0 {name=l24 sig_type=std_logic lab=vd}
-C {sky130_fd_pr/res_high_po_0p35.sym} 175 -685 3 0 {name=R1
+C {sky130_fd_pr/res_high_po_0p35.sym} 175 -685 3 0 {name=Ri
 W=0.35
 L=0.98
 model=res_high_po_0p35

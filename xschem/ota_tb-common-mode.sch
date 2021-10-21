@@ -27,7 +27,7 @@ N 755 -455 755 -445 { lab=GND}
 N 1185 -625 1185 -610 { lab=ib}
 N 1230 -625 1230 -615 { lab=vs}
 N 1290 -670 1300 -670 { lab=out}
-N 1230 -725 1230 -715 { lab=#net1}
+N 1230 -725 1230 -715 { lab=vd}
 N 1140 -655 1155 -655 { lab=in1}
 N 1140 -685 1155 -685 { lab=in1}
 C {devices/vsource.sym} 755 -705 0 0 {name=VIN1 value="DC 0 AC 1"}
@@ -44,8 +44,6 @@ run
 *CMRR
 plot db(OUT) 
 .endc"}
-C {devices/vdd.sym} 990 -945 0 0 {name=l1 lab=vd}
-C {devices/vdd.sym} 1120 -950 0 0 {name=l4 lab=vs}
 C {devices/gnd.sym} 1120 -890 0 0 {name=l6 lab=GND}
 C {devices/gnd.sym} 990 -885 0 0 {name=l7 lab=GND}
 C {devices/gnd.sym} 755 -445 0 0 {name=l9 lab=GND}
@@ -54,11 +52,21 @@ C {devices/lab_pin.sym} 755 -745 0 0 {name=l10 sig_type=std_logic lab=in1}
 C {devices/lab_pin.sym} 1140 -655 0 0 {name=l3 sig_type=std_logic lab=in1}
 C {devices/lab_pin.sym} 1140 -685 0 0 {name=l5 sig_type=std_logic lab=in1}
 C {devices/lab_pin.sym} 1185 -610 2 0 {name=l12 sig_type=std_logic lab=ib}
-C {devices/vdd.sym} 1230 -726.25 0 0 {name=l13 lab=vd}
-C {devices/vdd.sym} 1230 -615 2 0 {name=l14 lab=vs}
 C {devices/lab_pin.sym} 1300 -670 2 0 {name=l15 sig_type=std_logic lab=out}
 C {devices/code_shown.sym} 1480 -655 0 0 {name=Config only_toplevel=false value=".lib /edatools/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 *.include /home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/minimal_libs/sky130_libs/sky130_lib.spice
 *.param nf=1"
 }
 C {/home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/xschem/ota.sym} 1175 -670 0 0 {name=X1}
+C {devices/capa.sym} 1290 -640 0 0 {name=Cl
+m=1
+value=4p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/gnd.sym} 1290 -610 0 0 {name=l8 lab=GND}
+C {devices/lab_pin.sym} 990 -945 0 0 {name=l1 sig_type=std_logic lab=vd
+}
+C {devices/lab_pin.sym} 1120 -950 0 0 {name=l4 sig_type=std_logic lab=vs}
+C {devices/lab_pin.sym} 1230 -725 1 0 {name=l11 sig_type=std_logic lab=vd
+}
+C {devices/lab_pin.sym} 1230 -615 3 0 {name=l13 sig_type=std_logic lab=vs}
