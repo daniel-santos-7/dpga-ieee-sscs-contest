@@ -1,5 +1,5 @@
 *Transmission Gates
-*.include	./tg.spice
+.include	./tg.spice
 
 .subckt	digpot	n0	n8	vdd	vss	c7 c6 c5 c4 c3 c2 c1 c0	Rn=850
 

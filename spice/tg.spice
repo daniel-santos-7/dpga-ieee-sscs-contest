@@ -1,7 +1,5 @@
 ** transmission gate **
 
-.include ../minimal_libs/sky130_libs/sky130_lib.spice
-
 .subckt	tg	ctrl	a	b	vdd	vss
 
 *lbl	drain	gate	source	bulk	model			length	width

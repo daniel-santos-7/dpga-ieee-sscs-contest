@@ -1,5 +1,4 @@
 *OTA BUFFERED
-.include ../minimal_libs/sky130_libs/sky130_lib.spice
 
 .subckt	ota	in1	in2	vd	vs	ib	out
 

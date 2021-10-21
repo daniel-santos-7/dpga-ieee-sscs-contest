@@ -1,5 +1,5 @@
 *TB DC OTA BUFFERED
-
+.include ../minimal_libs/sky130_libs/sky130_lib.spice
 .include ./ota.spice
 
 X1	IN1	IN2	VD	VS	A	OUT ota

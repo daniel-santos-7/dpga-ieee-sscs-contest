@@ -1,6 +1,8 @@
 *TB AC OTA BUFFERED
-
+.include ../minimal_libs/sky130_libs/sky130_lib.spice
 .include ./ota.spice
+*.lib "/home/hugodg/sky130_skel/dpga-ieee-sscs-contest-main/minimal_libs/skywater-pdk-libs-sky130_fd_pr/models/sky130.lib.spice" tt
+
 
 X1	IN1	IN2	VD	VS	A	OUT	 ota
 
@@ -33,11 +35,12 @@ destroy all
 run
 
 *Magnitude
-
-plot db(abs(OUT/IN1)) 40.4615
+let gain=db(abs(OUT/IN1))
+let gain_3db=40.4615
+plot  gain gain_3db
 
 *Fase em graus
-
-plot (ph(OUT)-ph(IN1))*180/3.14159 1.0472*180/3.14159
+let phase = (ph(OUT)-ph(IN1))*180/3.14159
+plot  phase 60deg
 
 .endc

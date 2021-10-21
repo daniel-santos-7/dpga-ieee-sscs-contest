@@ -1,0 +1,43 @@
+*TB CMRR OTA BUFFERED
+.include ../minimal_libs/sky130_libs/sky130_lib.spice
+.include ./ota.spice
+
+*=====COMMON MODE======
+X1	IN11	IN11	VD	VS	A1	OUT1 ota
+CL1	OUT1	0	4p
+
+Ibias1 A1 0 5.53u
+VDD VD 0 1.8
+VSS VS 0 -1.8
+
+VIN11 IN11 0 DC 0 AC 1
+
+*=====DIFF MODE======
+X2	IN12	IN22	VD	VS	A2	OUT2 ota
+CL2	OUT2	0	4p
+
+Ibias2 A2 0 5.53u
+
+VIN12 IN12 0 DC 0 AC 1
+VIN22 IN22 0 DC 0 AC 1 180
+
+* cmd 	step	stop
+.ac	dec	2000	1	110Meg
+.end
+
+.control
+
+destroy all
+run
+
+*CMRR
+let gain_common=db(OUT1/IN11)
+*plot gain_common
+
+let gain_diff=db(OUT2/(IN12-IN22)) 
+*plot gain_diff
+
+let cmrr=gain_diff-gain_common
+plot cmrr
+
+.endc
