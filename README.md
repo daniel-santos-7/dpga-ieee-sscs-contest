@@ -110,41 +110,29 @@ The analog and digital circuit layouts created will be presented below.
 
 **Figure 14** - Digital potentiometer simulation.
 
-<p align="center"><img width="640" src=".github/simulations/dpga_tb.png"/></p>
-
-**Figure 15** - DPGA simultation.
-
 <p align="center"><img width="640" src=".github/simulations/ota_CMRR.png"/></p>
 
-**Figure 16** - OTA CMRR simultation.
+**Figure 15** - OTA CMRR simultation.
 
 <p align="center"><img width="640" src=".github/simulations/ota_ac-gain.png"/></p>
 
-**Figure 17** - OTA gain.
-
-<p align="center"><img width="640" src=".github/simulations/ota_ac-phase.png"/></p>
-
-**Figure 18** - OTA phase.
-
-<p align="center"><img width="640" src=".github/simulations/ota_common-mode.png"/></p>
-
-**Figure 19** - OTA common mode.
+**Figure 16** - OTA gain.
 
 <p align="center"><img width="640" src=".github/simulations/ota_dc.png"/></p>
 
-**Figure 20** - OTA DC simulatation.
-
-<p align="center"><img width="640" src=".github/simulations/ota_diff-mode.png"/></p>
-
-**Figure 21** - OTA differential mode.
+**Figure 17** - OTA DC simulatation.
 
 <p align="center"><img width="640" src=".github/simulations/ota_large-signal.png"/></p>
 
-**Figure 22** - OTA large signal simulation.
+**Figure 18** - OTA large signal simulation.
 
 <p align="center"><img width="640" src=".github/simulations/ota_tran.png"/></p>
 
-**Figure 22** - OTA transient simulation.
+**Figure 19** - OTA transient simulation.
+
+<p align="center"><img width="640" src=".github/simulations/spi_slave.png"/></p>
+
+**Figure 20** - SPI simulation.
 
 ## 9. APPLICABLE REFERENCES
 
