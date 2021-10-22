@@ -78,61 +78,62 @@ The analog and digital circuit layouts created will be presented below.
 
 <p align="center"><img width="640" src=".github/layout/digpot.png"/></p>
 
-**Figure 8** - Digital potentiometer layout.
+**Figure 9** - Digital potentiometer layout.
 
 <p align="center"><img width="640" src=".github/layout/dpga_spi.png"/></p>
 
-**Figure 9** - DPGA layout.
+**Figure 10** - DPGA layout.
 
 <p align="center"><img width="640" src=".github/layout/ota.png"/></p>
 
-**Figure 10** - OTA Miller layout.
+**Figure 11** - OTA Miller layout.
 
 <p align="center"><img width="640" src=".github/layout/spi.png"/></p>
 
-**Figure 10** - SPI module layout (a).
+**Figure 12** - SPI module layout (a).
 
 <p align="center"><img width="640" src=".github/layout/spi_ports.png"/></p>
 
-**Figure 11** - SPI module layout (b).
+**Figure 13** - SPI module layout (b).
 
 ## 8. Simulations
+The results of the simulations carried out will be presented below.
 
 <p align="center"><img width="640" src=".github/simulations/digpot_tb-00000000b.png"/></p>
 
-**Figure 12** - DPGA minimum gain.
+**Figure 14** - DPGA minimum gain.
 
 <p align="center"><img width="640" src=".github/simulations/dpga_tb-11111111b.png"/></p>
 
-**Figure 13** - DPGA maximum gain.
+**Figure 15** - DPGA maximum gain.
 
 <p align="center"><img width="640" src=".github/simulations/digpot_tb.png"/></p>
 
-**Figure 14** - Digital potentiometer simulation.
+**Figure 16** - Digital potentiometer simulation.
 
 <p align="center"><img width="640" src=".github/simulations/ota_CMRR.png"/></p>
 
-**Figure 15** - OTA CMRR simultation.
+**Figure 17** - OTA CMRR simultation.
 
 <p align="center"><img width="640" src=".github/simulations/ota_ac-gain.png"/></p>
 
-**Figure 16** - OTA gain.
+**Figure 18** - OTA gain.
 
 <p align="center"><img width="640" src=".github/simulations/ota_dc.png"/></p>
 
-**Figure 17** - OTA DC simulatation.
+**Figure 19** - OTA DC simulation.
 
 <p align="center"><img width="640" src=".github/simulations/ota_large-signal.png"/></p>
 
-**Figure 18** - OTA large signal simulation.
+**Figure 20** - OTA large signal simulation.
 
 <p align="center"><img width="640" src=".github/simulations/ota_tran.png"/></p>
 
-**Figure 19** - OTA transient simulation.
+**Figure 21** - OTA transient simulation.
 
 <p align="center"><img width="640" src=".github/simulations/spi_slave.png"/></p>
 
-**Figure 20** - SPI simulation.
+**Figure 22** - SPI simulation.
 
 ## 9. APPLICABLE REFERENCES
 
