@@ -18,12 +18,13 @@
 | ----------------------- | ------------------- | ------------------- |
 | Vdd                     | 1.8                 | V                   |
 | Output Swing            | Vcmout+-0           | V                   |
-| Open-loop Gain          | 60                  | dB                  |
-| Programmable gain range | 1-256               | V/V                 |
-| GBW                     | 5                   | MHz                 |
-| Phase margin            | >= 60               | °                   |
-| Slew Rate               | 0.8                 | V/us                |
-| CMRR                    | 81.5                | dB                  |
+| Open-loop Gain          | 42,5                | dB                  |
+| Programmable gain range | 4.6-250             | V/V                 |
+| GBW                     | 3.8                 | MHz                 |
+| Phase margin            | 60                  | °                   |
+| Slew Rate               | 0.65                | V/us                |
+| CMRR                    | 90                  | dB                  |
+| Area                    | 0.03                | mm²                 |
 
 **Table 1** – DPGA expected performance.
 
@@ -90,11 +91,11 @@ The analog and digital circuit layouts created will be presented below.
 
 <p align="center"><img width="640" src=".github/layout/spi.png"/></p>
 
-**Figure 12** - SPI module layout (a).
+**Figure 12** - SPI module layout.
 
 <p align="center"><img width="640" src=".github/layout/spi_ports.png"/></p>
 
-**Figure 13** - SPI module layout (b).
+**Figure 13** - SPI module layout with ports highlights.
 
 ## 8. Simulations
 The results of the simulations carried out will be presented below.
@@ -134,6 +135,24 @@ The results of the simulations carried out will be presented below.
 <p align="center"><img width="640" src=".github/simulations/spi_slave.png"/></p>
 
 **Figure 22** - SPI simulation.
+
+## 8. INTERFACE
+
+| Port                    | type                |
+| ----------------------- | ------------------- |
+| ss                      | digital input       |
+| sclk                    | digital input       |
+| sdi                     | digital input       |
+| reset'                  | digital input       |
+| in                      | analog input        |
+| in2                     | analog input        |
+| Ib                      | analog input        |
+| out                     | analog output       |
+| vss1                    | power               |
+| gnd1                    | power               |
+| +vss2                   | power               |
+| -vss2                   | power               |
+| gnd2                    | power               |
 
 ## 9. APPLICABLE REFERENCES
 
