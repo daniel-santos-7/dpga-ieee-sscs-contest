@@ -7,26 +7,26 @@
 - Hugo Dias Giló (Undergraduate student)
 - Daniel Da Silva Santos (Undergraduate student)
 
-## 2. A SHORT DESCRIPTION OF THE CIRCUIT AND YOUR SPECIFIC DESIGN GOALS
+## 2. A SHORT DESCRIPTION OF THE CIRCUIT
 
-<p align="justify">The proposed circuit is a Digitally Programmable Gain Amplifier (DVGA) which will work to amplify voltage signal with programmable gain options, ranging from 1 V / V to 256 V / V. The main core is an OTA Miller with output buffer configured as an inverter amplifier. The circuit feedback resistances is controlled by 8 CMOS switches (Transmission Gates) that are configured according to binary word stored in the shift register which is connected to a Serial Peripheral Interface (SPI) that provides a connection for external control. The circuit is expected to work with 1.8 V power supply and to have a unity gain frequency of 5 MHz. Also is expected a higher than 80 dB CMRR and 60 dB open-loop gain, among others specifications presented on table 1.</p>
+<p align="justify">The proposed circuit is a Digitally Programmable Gain Amplifier (DVGA) which will work to amplify voltage signal with programmable gain options, ranging from 1 V / V to 256 V / V. The main core is an OTA Miller with output buffer configured as an inverter amplifier. The circuit feedback resistances is controlled by 8 CMOS switches (Transmission Gates) that are configured according to binary word stored in the shift register which is connected to a Serial Peripheral Interface (SPI) that provides a connection for external control.</p>
 
-## 3. TARGET PERFORMANCE SUMMARY TABLE
+## 3. PERFORMANCE SUMMARY TABLE
 
 
 | Parameter               |  Specification      | Unit                |
 | ----------------------- | ------------------- | ------------------- |
 | Vdd                     | 1.8                 | V                   |
-| Output Swing            | Vcmout+-0           | V                   |
-| Open-loop Gain          | 42,5                | dB                  |
+| Output Swing            | (1.8 -0.64)         | V                   |
+| Open-loop Gain          | 42.3                | dB                  |
 | Programmable gain range | 4.6-250             | V/V                 |
-| GBW                     | 3.8                 | MHz                 |
-| Phase margin            | 60                  | °                   |
-| Slew Rate               | 0.65                | V/us                |
-| CMRR                    | 90                  | dB                  |
+| GBW                     | 2.8                 | MHz                 |
+| Phase margin            | 47                  | °                   |
+| Slew Rate               | 0.7                 | V/us                |
+| CMRR                    | 88                  | dB                  |
 | Area                    | 0.03                | mm²                 |
 
-**Table 1** – DPGA expected performance.
+**Table 1** – DPGA performance.
 
 ## 4. A BLOCK DIAGRAM
 
@@ -136,7 +136,7 @@ The results of the simulations carried out will be presented below.
 
 **Figure 22** - SPI simulation.
 
-## 8. INTERFACE
+## 8. PORTS
 
 | Port                    | type                |
 | ----------------------- | ------------------- |
@@ -148,10 +148,10 @@ The results of the simulations carried out will be presented below.
 | in2                     | analog input        |
 | Ib                      | analog input        |
 | out                     | analog output       |
-| vss1                    | power               |
+| vd1                     | power               |
 | gnd1                    | power               |
-| +vss2                   | power               |
-| -vss2                   | power               |
+| vd2                     | power               |
+| vs                      | power               |
 | gnd2                    | power               |
 
 ## 9. APPLICABLE REFERENCES
